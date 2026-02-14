@@ -132,6 +132,12 @@ const myQuestions = [
                 const submitBtn = document.createElement('button');
                 submitBtn.innerText = "Submit Answer";
                 submitBtn.classList.add('btn');
+
+                inputField.addEventListener('keypress', function(event) {
+                    if (event.key === 'Enter') {
+                        submitBtn.click(); // This pretends the user clicked the button
+                    }
+                });
                 
                 submitBtn.onclick = () => {
                     const herAnswer = inputField.value.toLowerCase().trim();
