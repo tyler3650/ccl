@@ -43,6 +43,22 @@ const myQuestions = [
             },
             {
                 type: "text",
+                image: "height.png",
+                question: "What's my height (in cm)?",
+                correctAnswer: "186"
+            },
+            {
+                type: "choice",
+                question: "Do I actually like you?",
+                answers: [
+                    { text: "yes", correct: true },
+                    { text: "obviously", correct: true },
+                    { text: "ew no", correct: false },
+                    { text: "hell yes", correct: true }
+                ]
+            },
+            {
+                type: "text",
                 image: "dumbbell.png",
                 question: "How many gym sessions have we done together? (write a number e.g. 67)",
                 correctAnswer: "2"
@@ -52,6 +68,21 @@ const myQuestions = [
                 image: "hug.png",
                 question: "How many (whole) days until you're in my arms?",
                 correctAnswer: "7"
+            },
+            {
+                type: "choice",
+                image: "notouch.png",
+                question: "Where do I want you to touch me?",
+                answers: [
+                    { text: "face", correct: true },
+                    { text: "lips", correct: true },
+                    { text: "hands", correct: true },
+                    { text: "legs", correct: true },
+                    { text: "butt", correct: false },
+                    { text: "neck", correct: true },
+                    { text: "back", correct: true },
+                    { text: "chest", correct: true },
+                ]
             },
             {
                 type: "choice",
