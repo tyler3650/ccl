@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Special Question...</title>
     <style>
-        /* --- STYLE SECTION (The Look) --- */
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
@@ -67,24 +67,76 @@
             padding: 15px 30px;
             border-radius: 50px;
         }
+        .hearts-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Keeps it behind your quiz card */
+            pointer-events: none; /* Ensures you can still click the quiz buttons */
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 75, 110, 0.3); /* Soft transparent pink */
+            transform: rotate(45deg);
+            animation: floatUp 8s infinite ease-in-out;
+        }
+
+        /* This creates the two round humps of the heart */
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: inherit;
+            border-radius: 50%;
+        }
+        .heart::before { top: -15px; left: 0; }
+        .heart::after { left: -15px; top: 0; }
+
+        /* The floating animation */
+        @keyframes floatUp {
+            0% { bottom: -50px; opacity: 1; transform: translateX(0) rotate(45deg) scale(1); }
+            100% { bottom: 100vh; opacity: 0; transform: translateX(-50px) rotate(45deg) scale(1.5); }
+        }
+
+        /* Spacing them out and randomizing their speed/delays */
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 9s; }
+        .heart:nth-child(2) { left: 30%; animation-delay: 2s; animation-duration: 7s; }
+        .heart:nth-child(3) { left: 50%; animation-delay: 4s; animation-duration: 10s; }
+        .heart:nth-child(4) { left: 70%; animation-delay: 1s; animation-duration: 8s; }
+        .heart:nth-child(5) { left: 85%; animation-delay: 3s; animation-duration: 6s; }
     </style>
 </head>
 <body>
+    <div class="hearts-bg">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
 
     <div id="quiz-container">
         <div id="start-screen">
             <h1>hey my pretty girl</h1>
-            <p>I have a few questions for you before you get your present...</p>
-            <button class="btn" onclick="startQuiz()">Okay, I'm ready!</button>
+            <p>since you like trivia so much, I made you your very own quiz</p>
+            <button class="btn" onclick="startQuiz()">press this if you want me</button>
         </div>
 
         <div id="question-screen" class="hidden">
-            <h2 id="question-text">Question goes here</h2>
+            <h2 id="question-text">question</h2>
             <div id="answer-buttons"></div>
         </div>
 
         <div id="reward-screen" class="hidden">
-            <h1>Yay! You passed! 🎉</h1>
+            <h1>Wow you actually did it! Knew you could do it yourself</h1>
             <p id="reward-message">Here is your Valentine's surprise:</p>
             
             <a href="https://www.opentable.com/" class="reward-btn" id="final-link" target="_blank">Click to see where we are going</a>
