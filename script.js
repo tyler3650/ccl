@@ -1,6 +1,7 @@
 const myQuestions = [
             {
                 type: "choice",
+                image: "dog.png",
                 question: "What's your dog's name?",
                 answers: [
                     { text: "Butterball", correct: false },
