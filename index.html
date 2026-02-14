@@ -70,6 +70,16 @@
             border-color: #ff4b6e;
         }
 
+        .quiz-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* nee nah */
         .hidden { display: none; }
         
@@ -84,6 +94,7 @@
             padding: 15px 30px;
             border-radius: 50px;
         }
+
         .hearts-bg {
             position: fixed;
             top: 0;
@@ -142,7 +153,9 @@
 
     <div id="quiz-container">
         <div id="start-screen">
-            <h1>hey my pretty girl</h1>
+            <img src="flowers.png" class="quiz-img" alt="Flowers">
+            <h1>heyyyy pretty girl</h1>
+            <img src="flowers2.png" class="quiz-img" alt="Flowers 2">
             <p>since you like trivia so much, I made you your very own quiz</p>
             <button class="btn" onclick="startQuiz()">press this if u want me</button>
         </div>

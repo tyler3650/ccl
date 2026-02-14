@@ -74,6 +74,14 @@ const myQuestions = [
         function showQuestion() {
             let question = myQuestions[currentQuestionIndex];
             document.getElementById('question-text').innerText = question.question;
+
+            const qImage = document.getElementById('question-image');
+            if (question.image) {
+                qImage.src = question.image;
+                qImage.classList.remove('hidden');
+            } else {
+                qImage.classList.add('hidden');
+            }
             
             const answerButtons = document.getElementById('answer-buttons');
             answerButtons.innerHTML = '';
