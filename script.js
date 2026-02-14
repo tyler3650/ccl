@@ -16,6 +16,7 @@ const myQuestions = [
             },
             {
                 type: "choice",
+                image: "slide.png",
                 question: "Where did we have our first kiss? (w rizz from me btw)",
                 answers: [
                     { text: "in the egg under the Greensborough shops", correct: false },
@@ -36,21 +37,25 @@ const myQuestions = [
             },
             {
                 type: "text",
+                image: "ball.png",
                 question: "What's my youngest sister's name?",
                 correctAnswer: "annie"
             },
             {
                 type: "text",
+                image: "dumbbell.png",
                 question: "How many gym sessions have we done together? (write a number e.g. 67)",
                 correctAnswer: "2"
             },
             {
                 type: "text",
+                image: "hug.png",
                 question: "How many (whole) days until you're in my arms?",
                 correctAnswer: "7"
             },
             {
                 type: "choice",
+                image: "flowers2.png",
                 question: "What's your favourite thing about me?",
                 answers: [
                     { text: "my abs (boring)", correct: false },
