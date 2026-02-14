@@ -24,10 +24,9 @@ const myQuestions = [
             {
                 question: "What's my middle name?",
                 answers: [
-                    { text: "in the egg under the Greensborough shops", correct: false },
-                    { text: "at the top of the slide at your local playground", correct: true },
-                    { text: "in our minecraft world", correct: false },
-                    { text: "in your head (I'm not real)", correct: false }
+                    { text: "Caroline", correct: true },
+                    { text: "John", correct: false },
+                    { text: "Butterball", correct: false },
                 ]
             },
         ];
